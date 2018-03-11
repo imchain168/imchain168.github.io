@@ -1,0 +1,11 @@
+{
+  "supportTokenSearch": false,
+  "android": {
+    "version": 1.0,
+    "url": ""
+  },
+  "ios": {
+    "version": 1.0,
+    "url": ""
+  }
+}
