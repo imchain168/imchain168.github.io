@@ -3,7 +3,6 @@
     {
       "icon": "https://imchain168.github.io/dapp/icons/market.png",
       "name": "市场行情",
-      "type": "dapp",
       "url": "https://imchain168.github.io/dapp-trade/index.html"
     }
   ]
