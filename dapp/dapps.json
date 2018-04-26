@@ -1,10 +1,10 @@
 {
   "items": [
     {
-      "icon": "https://imchain168.github.io/dapp/icons/cryptokitties.png",
-      "name": "CryptoKitties",
-      "type": "game",
-      "url": "https://www.cryptokitties.co/"
+      "icon": "https://imchain168.github.io/dapp/icons/market.png",
+      "name": "市场行情",
+      "type": "dapp",
+      "url": "https://imchain168.github.io/dapp-trade/index.html"
     }
   ]
 }
