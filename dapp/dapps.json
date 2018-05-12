@@ -4,6 +4,11 @@
       "icon": "https://imchain168.github.io/dapp/icons/market.png",
       "name": "市场行情",
       "url": "https://imchain168.github.io/dapp-trade/index.html"
-    }
+    },
+    {
+        "icon": "https://coolwallet168.github.io/blockshop/logo.png",
+        "name": "ETH 在线充值",
+        "url": "https://coolwallet168.github.io/blockshop/"
+     }
   ]
 }
