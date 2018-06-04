@@ -4,6 +4,11 @@
         "icon": "https://coolwallet168.github.io/blockshop/logo.png",
         "name": "ETH 在线充值",
         "url": "https://coolwallet168.github.io/blockshop/"
-     }
+     },
+    {
+      "icon": "https://imchain168.github.io/blocksay/blocksay.png",
+      "name": "区块说",
+      "url": "https://imchain168.github.io/blocksay/index.html"
+    }
   ]
 }
