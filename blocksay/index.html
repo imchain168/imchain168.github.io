@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>区块说</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,max-scale=1,user-scalable=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="shortcut icon" href="blocksay.png">
+    <style type="text/css">
+        body{background-color:#f4f4f4}.container{padding:0 10px}.mark-wrap{background-color:#fff;display:-ms-flexbox;display:flex;width:100%;-ms-flex-direction:row;flex-direction:row;-ms-flex-align:center;align-items:center;margin-top:10px}.ul-mark{list-style:none;padding:0;margin:0;margin-top:5px}.label{color:#666;font-size:12px}.mark-input{-ms-flex:1 1;flex:1 1}.mark-input>input{border:0}.ul-mark>li{background-color:#fff;font-size:12px;color:#666;display:inline-block;border:1px solid #228b22;border-radius:4px;padding:2px 5px;margin-right:10px;margin-top:5px}.ul-mark>li span.x{padding:0 0 0 5px;font-size:15px}.ul-mark>li.active{font-size:12px;display:inline-block;border:1px solid #228b22;border-radius:4px;padding:2px}.sumb-btn,.ul-mark>li.active{background-color:#228b22;color:#fff}.sumb-btn{border-radius:4px;text-align:center;padding:6px 0;margin-top:20px}
+        p#result { word-wrap:break-word; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div><textarea id="content" maxlength="500" rows="10" placeholder="把你想对TA说的写进区块链，永久保存，不可串改。"
+                   style="border: 1px solid rgb(221, 221, 221); width: 100%; font-size: 12px;"></textarea>
+        <p id="tips" style="font-size: 12px; color: rgb(51, 51, 51); text-align: right; margin: 0px;"></p></div>
+    <div id="submit" class="sumb-btn">发布</div>
+    <p id="result"></p>
+</div>
+<script type="text/javascript">
+    (function(){var a=500;var d=document.getElementById("tips");var b=document.getElementById("content");var e=document.getElementById("submit");function c(){d.innerText="还可以输入"+(a-b.value.length)+"个字"}c();b.addEventListener("input",function(){c()},false);e.onclick=function(){if(b.value.length>0){var f=web3.fromUtf8(b.value);web3.eth.sendTransaction({to:web3.eth.defaultAccount,data:f,gas:200000,gasPrice:web3.toWei(30,"gwei")},function(h,g){console.log(h,g);if(g){web3.version.getNetwork(function(k,l){var j="";if(l=="1"){j="https://etherscan.io/tx/"}else{if(l=="3"){j="https://ropsten.etherscan.io/tx/"}}var i=j+g;result.innerHTML='正在写入区块链，可以通过以下链接查看进入<br/><a href="'+i+'">'+i+"</a>"})}})}}})();
+</script>
+</body>
+</html>
