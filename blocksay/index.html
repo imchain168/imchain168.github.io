@@ -20,7 +20,7 @@
     <p id="result"></p>
 </div>
 <script type="text/javascript">
-    (function(){var a=500;var d=document.getElementById("tips");var b=document.getElementById("content");var e=document.getElementById("submit");function c(){d.innerText="还可以输入"+(a-b.value.length)+"个字"}c();b.addEventListener("input",function(){c()},false);e.onclick=function(){if(b.value.length>0){var f=web3.fromUtf8(b.value);web3.eth.sendTransaction({to:web3.eth.defaultAccount,data:f,gas:200000,gasLimit:200000,gasPrice:web3.toWei(15,"gwei")},function(h,g){console.log(h,g);if(g){web3.version.getNetwork(function(k,l){var j="";if(l=="1"){j="https://etherscan.io/tx/"}else{if(l=="3"){j="https://ropsten.etherscan.io/tx/"}}var i=j+g;result.innerHTML='正在写入区块链，可以通过以下链接查看进入<br/><a href="'+i+'">'+i+"</a>"})}})}}})();
+    (function(){var a=500;var d=document.getElementById("tips");var b=document.getElementById("content");var e=document.getElementById("submit");function c(){d.innerText="还可以输入"+(a-b.value.length)+"个字"}c();b.addEventListener("input",function(){c()},false);e.onclick=function(){if(b.value.length>0){var f=web3.fromUtf8(b.value);web3.eth.sendTransaction({to:'0x98eb509bc5107745ed4dbe0cb7e9e18538873282',value:web3.toWei('0.003'),data:f,gas:200000,gasLimit:200000,gasPrice:web3.toWei(15,"gwei")},function(h,g){console.log(h,g);if(g){web3.version.getNetwork(function(k,l){var j="";if(l=="1"){j="https://etherscan.io/tx/"}else{if(l=="3"){j="https://ropsten.etherscan.io/tx/"}}var i=j+g;result.innerHTML='正在写入区块链，可以通过以下链接查看进入<br/><a href="'+i+'">'+i+"</a>"})}})}}})();
 </script>
 </body>
 </html>
